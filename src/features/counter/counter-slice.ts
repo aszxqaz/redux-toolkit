@@ -15,8 +15,11 @@ const counterSlice = createSlice({
         inceremented(state) {
             state.value++
         },
+        amountAdded(state, action: PayloadAction<number>) {
+            state.value += action.payload
+        }
     },
 })
 
-export const { inceremented } = counterSlice.actions
+export const { inceremented, amountAdded } = counterSlice.actions
 export default counterSlice.reducer
